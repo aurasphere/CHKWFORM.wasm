@@ -1,4 +1,4 @@
-import wasmModule from "../build/CHKWFORM.js";
+import wasmModule from "./build/CHKWFORM.js";
 globalThis.response = {
   body: "",
 };
