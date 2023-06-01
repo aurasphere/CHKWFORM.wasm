@@ -1,0 +1,12 @@
+# Run "docker-compose up" to compile src/worker.cob into the build scripts
+version: '3'
+services:
+  cobweb:
+    image: xtuc/cobweb
+    volumes:
+      - ./cache:/root/.emscripten_cache/
+      - ./src:/worker
+      - ./build:/build
+    environment:
+      - EM_OUT=/build/CHKWFORM.js
+    command: /worker/worker.cob
